@@ -1,5 +1,5 @@
 #Senpro10
-Warnai hidupmu 
+Warnai hidupmu  
 Kelompok 10 Senior Project Teknologi Informasi  
 Ketua Kelompok:  
 Anggota 1:  
