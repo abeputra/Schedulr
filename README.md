@@ -1,5 +1,5 @@
-#Senpro10  
-Warnai hidupmu  
+#TaskIt  
+Kelola Tugas, Raih Produktivitas!  
   
 Kelompok 10 Senior Project Teknologi Informasi  
 Ketua Kelompok:  
