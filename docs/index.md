@@ -6,4 +6,4 @@ Anggota dan NIM Kelompok
 - Gabriel Syailendra Fernandez - 22/503450/TK/55009  
   
 "Project Senior Project TI"  
-Instansi: Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada  
+Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada  
