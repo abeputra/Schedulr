@@ -16,7 +16,7 @@ Metodologi yang digunakan: Agile Model
   
 ### **A. Alasan pemilihan metodologi**  
 - Agile dipilih karena proyek ini membutuhkan fleksibilitas dalam pengembangan dan memungkinkan perubahan requirement di sepanjang proses.  
-- Dengan pendekatan **iteratif**, fitur-fitur dalam aplikasi dapat diuji lebih awal dan diperbaiki sebelum pengembangan lebih lanjut.  
+- Dengan pendekatan iteratif, fitur-fitur dalam aplikasi dapat diuji lebih awal dan diperbaiki sebelum pengembangan lebih lanjut.  
 - Model ini memungkinkan tim untuk terus meningkatkan produk berdasarkan feedback pengguna.  
   
 ---
