@@ -6,7 +6,8 @@
 - **Gabriel Syailendra Fernandez** – 22/503450/TK/55009  
 
 ## 🎯 Project Senior Project TI  
-📍 **Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada**    
+📍 **Departemen Teknik Elektro dan Teknologi Informasi**  
+📍 **Fakultas Teknik, Universitas Gadjah Mada**    
 
 ---
 
@@ -70,16 +71,18 @@ _(Tambahkan gambar ERD setelah diunggah ke repository)_
 
 ## 🖌 **Low-Fidelity Wireframe**  
 Berikut adalah beberapa wireframe awal dari proyek:  
-
 ![Lo-Fi Wireframe Senpro 1](https://github.com/user-attachments/assets/49f0ff86-2fcc-4419-a39c-bbc285eb90ff)  
+  
 ![Lo-Fi Wireframe Senpro 2](https://github.com/user-attachments/assets/1ac0e96c-ef9f-493c-8b9d-37ed4084ab62)  
+  
 ![Lo-Fi Wireframe Senpro 3](https://github.com/user-attachments/assets/37037fd7-609f-45a7-84fd-3c41e1e99498)  
+  
 ![Lo-Fi Wireframe Senpro 4](https://github.com/user-attachments/assets/de848058-f8e6-43c2-b256-4b18d5da9f95)  
+  
 ![Lo-Fi Wireframe Senpro 5](https://github.com/user-attachments/assets/ea77b00c-95a6-4758-8cfa-229bbe918ab3)  
 
 ---
 
 ## 📊 **Gantt-Chart (Timeline Proyek 1 Semester)**  
 Berikut adalah perencanaan pengerjaan proyek selama satu semester:  
-
 ![Gantt Chart Senior Project](https://github.com/user-attachments/assets/0a1773a9-af68-47c9-99f6-5093820f682e)  
