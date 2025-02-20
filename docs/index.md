@@ -60,8 +60,8 @@ Produk ini ditujukan untuk berbagai jenis pengguna dengan kebutuhan yang berbeda
 ---
 
 ## 📌 **Functional Requirements**  
-_(Tambahkan daftar functional requirements di sini)_  
-
+![file_2025-02-20_17 11 40](https://github.com/user-attachments/assets/78b17d56-e4b9-4879-8da0-b79090b9e61e)  
+  
 ---
 
 ## 📌 **Entity Relationship Diagram (ERD)**  
