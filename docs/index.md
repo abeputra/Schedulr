@@ -55,8 +55,8 @@ Produk ini ditujukan untuk berbagai jenis pengguna dengan kebutuhan yang berbeda
 ---
 
 ## 📍 **Use Case Diagram**  
-_(Tambahkan gambar di sini setelah diunggah ke repository)_  
-
+![Use Case Senior Project](https://github.com/user-attachments/assets/56adcdc0-c7a6-43df-987e-c53ab4d9b293)  
+  
 ---
 
 ## 📍 **Functional Requirements**  
@@ -65,8 +65,8 @@ _(Tambahkan daftar functional requirements di sini)_
 ---
 
 ## 📍 **Entity Relationship Diagram (ERD)**  
-_(Tambahkan gambar ERD setelah diunggah ke repository)_  
-
+![ERD Senior Project](https://github.com/user-attachments/assets/2ee0a50c-0ee0-48ad-b64b-f73c714addc5)  
+  
 ---
 
 ## 🖌 **Low-Fidelity Wireframe**  
