@@ -1,0 +1,62 @@
+name: Test, Build, and Deploy | Senior Project
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Testing Build pre-Deploy
+        uses: actions/setup-node@v2
+        with: 
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm i
+      - run: npm run build
+
+  deploy:
+    needs: test-build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Build app on VM
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          port: ${{ secrets.PORT }}
+          script: |
+            echo "Cek folder project";
+            [ ! -d "${HOME}/repos/PlanIt/" ] &&
+              {
+                echo "Repository belum di-clone. Cloning...";
+                mkdir -p ~/repos;
+                cd ~/repos;
+                git clone https://github.com/abeputra/PlanIt;
+                cd ~/repos/PlanIt;
+                echo "Install Package dan Build Project";
+                npm install;
+                npm run build;
+              } ||
+              {
+                echo "Repository sudah ada. Building....";
+                cd ~/repos/PlanIt;
+                git restore .;
+                git pull origin main;
+                echo "Install Package dan Build Project";
+                npm install;
+                npm run build;
+              }
