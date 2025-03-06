@@ -1,5 +1,5 @@
-#TaskIt  
-Kelola Tugas, Raih Produktivitas!  
+#Schedulr  
+Achieve Productivity  
   
 Kelompok 10 Senior Project Teknologi Informasi  
 Ketua Kelompok:  
