@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import db from '../config/Database.js';
+import db from '../config/database.js';
 
 const SubEvent = db.define('sub_events', {
   eventId: {
@@ -44,12 +44,17 @@ const SubEvent = db.define('sub_events', {
     type: DataTypes.ARRAY(DataTypes.STRING),
     defaultValue: [],
   },
-  task_type: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
+  // },
+  // task_type: {
+  //   type: DataTypes.STRING,
+  //   allowNull: true,
+  // },
 }, {
   freezeTableName: true,
 });
 
+
+SubEvent.associate = function(models) {
+  SubEvent.belongsTo(models.Event, { foreignKey: 'eventId' });
+};
 export default SubEvent;

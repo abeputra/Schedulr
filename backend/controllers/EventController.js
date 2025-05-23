@@ -1,5 +1,8 @@
 import Event from "../models/EventModel.js";
 import User from "../models/UserModel.js"; // Import User model for checking emails
+import crypto from 'crypto';
+import EventParticipant from '../models/EventParticipantModel.js';
+import { sendInvitationEmail } from '../services/EmailService.js';
 
 // Menambahkan event baru
 export const createEvent = async (req, res) => {
@@ -55,5 +58,72 @@ export const getUserEvents = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to fetch events" });
+  }
+};
+
+
+export const inviteParticipant = async (req, res) => {
+  try {
+    const { eventId, email } = req.body;
+    
+    const token = crypto.randomBytes(20).toString('hex');
+    
+    const participant = await EventParticipant.create({
+      eventId,
+      email,
+      responseToken: token,
+      status: 'pending'
+    });
+
+    // Kirim email
+    await sendInvitationEmail({
+      to: email,
+      eventId,
+      token
+    });
+
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// controllers/InvitationController.js
+
+export const acceptInvitation = async (req, res) => {
+  try {
+    const { token } = req.query;
+    
+    const participant = await EventParticipant.findOne({ 
+      where: { responseToken: token } 
+    });
+    
+    if (!participant) {
+      return res.status(404).send('Undangan tidak valid');
+    }
+
+    await participant.update({ status: 'accepted' });
+    res.send('Undangan telah diterima');
+  } catch (error) {
+    res.status(500).send('Error');
+  }
+};
+
+export const declineInvitation = async (req, res) => {
+  try {
+    const { token } = req.query;
+    
+    const participant = await EventParticipant.findOne({ 
+      where: { responseToken: token } 
+    });
+    
+    if (!participant) {
+      return res.status(404).send('Undangan tidak valid');
+    }
+
+    await participant.update({ status: 'declined' });
+    res.send('Undangan telah ditolak');
+  } catch (error) {
+    res.status(500).send('Error');
   }
 };

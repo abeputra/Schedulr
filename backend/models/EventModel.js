@@ -36,5 +36,7 @@ const Event = db.define(
 
 // Relasi: Event dimiliki oleh satu User
 Event.belongsTo(User, { foreignKey: "userId" });
-
+Event.associate = function(models) {
+  Event.hasMany(models.SubEvent, { foreignKey: 'eventId' });
+};
 export default Event;
